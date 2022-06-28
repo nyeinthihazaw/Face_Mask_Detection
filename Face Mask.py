@@ -5,7 +5,7 @@ import numpy as np
 import joblib 
 
 model= joblib.load('models.dat')
-st.header("Face MAsk Detection")
+st.header("Face Mask Detection")
 st.write("Choose any image :")
 uploaded_file = st.file_uploader("Choose an image...")
 if uploaded_file is not None:

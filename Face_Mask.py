@@ -14,7 +14,7 @@ uploaded_file = st.file_uploader("Choose an image...")
 if uploaded_file is not None:
 	
 	image = cv2.imread(uploaded_file)
-    	st.image(uploaded_file, caption='Input Image', use_column_width=True)
+    st.image(uploaded_file, caption='Input Image', use_column_width=True)
    	img=cv2.resize(image,(240,240),interpolation=cv2.INTER_AREA)
     	img_g=cv2.GaussianBlur(img,(3,3),0,0)
     	img_m=cv2.medianBlur(img,3)

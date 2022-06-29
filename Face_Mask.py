@@ -1,5 +1,5 @@
 pip install joblib
-pip install opencv-python
+pip install opencv-python-headless
 
 from pyexpat import model
 import streamlit as st 

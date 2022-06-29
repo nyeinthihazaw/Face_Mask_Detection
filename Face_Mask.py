@@ -26,9 +26,11 @@ if uploaded_file is not None:
 	fd=fd.reshape(1,-1)
 	result = model.predict(fd)
 	if result == [1]:
-		st.markdown(f'<h1 style="color:green;font-size:24px;">{"With Mask”"}</h1>', unsafe_allow_html=True)
+		st.markdown(f'<h1 style="color:green;font-size:24px;">{"With Mask"}</h1>', unsafe_allow_html=True)
 # 		st.write('With Mask')
 	elif result == [0]:
-		st.write('Without Mask');
+		st.markdown(f'<h1 style="color:red;font-size:24px;">{"Without Mask"}</h1>', unsafe_allow_html=True)
+# 		st.write('Without Mask')
 	else:
-		st.write('No Face Here')
+		st.markdown(f'<h1 style="color:white;font-size:24px;">{"No Face Here"}</h1>', unsafe_allow_html=True)
+# 		st.write('No Face Here')

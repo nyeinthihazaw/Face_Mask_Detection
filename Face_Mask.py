@@ -9,6 +9,8 @@ model= joblib.load('models.dat')
 st.header("Face Mask Detection")
 st.write("Choose any image :")
 uploaded_file = st.file_uploader("Choose an image...")
+min = st.slider('Minimun Intensity for Canny Edge', 0, 130, 25)
+max = st.slider('Maximun Intensity for Canny Edge', 0, 130, 25)
 if uploaded_file is not None:
 	
 	image = Image.open(uploaded_file)
@@ -19,7 +21,7 @@ if uploaded_file is not None:
 	img=cv2.resize(image,(240,240),interpolation=cv2.INTER_AREA)
 	img_g=cv2.GaussianBlur(img,(3,3),0,0)
 # 	img_m=cv2.medianBlur(img,3)
-	img_c=cv2.Canny(img_g,50,150)
+	img_c=cv2.Canny(img_g,min,max)
 # 	st.image(img_g, caption='Gaussian Blur', use_column_width=True)
 	st.image(img_c, caption='Canny Edge Detection', width=300)
 	fd=img_c.flatten()
@@ -34,5 +36,4 @@ if uploaded_file is not None:
 	else:
 		st.markdown(f'<h1 style="color:white;font-size:24px;">{"No Face Here"}</h1>', unsafe_allow_html=True)
 # 		st.write('No Face Here')
-	age = st.slider('How old are you?', 0, 130, 25)
-	st.write("I'm ", age, 'years old')
+

@@ -7,7 +7,7 @@ import cv2
 import numpy as np 
 import joblib 
 
-model= joblib.load('models.dat')
+model= joblib.load('https://github.com/nyeinthihazaw/Face_Mask_Detection/blob/main/models.dat')
 st.header("Face Mask Detection")
 st.write("Choose any image :")
 uploaded_file = st.file_uploader("Choose an image...")

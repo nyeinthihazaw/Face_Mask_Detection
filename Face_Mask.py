@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader("Choose an image...")
 if uploaded_file is not None:
 	
 	image = Image.open(uploaded_file)
-	st.image(image, caption='Input', use_column_width=True)
+	st.image(image, caption='Input', width=400)
 	img_array = np.array(image)
 	cv2.imwrite('out.png', cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR))
 	image =cv2.imread('out.png')

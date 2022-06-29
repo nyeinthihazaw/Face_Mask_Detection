@@ -20,7 +20,7 @@ if uploaded_file is not None:
 	img_g=cv2.GaussianBlur(img,(3,3),0,0)
 # 	img_m=cv2.medianBlur(img,3)
 	img_c=cv2.Canny(img_g,50,150)
-	st.image(img_g, caption='Gaussian Blur', use_column_width=True)
+# 	st.image(img_g, caption='Gaussian Blur', use_column_width=True)
 	st.image(img_c, caption='Canny Edge Detection', use_column_width=True)
 	fd=img_c.flatten()
 	fd=fd.reshape(1,-1)

@@ -15,7 +15,6 @@ st.write("Choose any image :")
 uploaded_file = st.file_uploader("Choose an image...")
 if uploaded_file is not None:
 	
-	uploaded_file = st.file_uploader("Upload Image")
 	image = Image.open(uploaded_file)
 	st.image(image, caption='Input', use_column_width=True)
 	img_array = np.array(image)

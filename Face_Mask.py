@@ -2,7 +2,7 @@ from pyexpat import model
 import streamlit as st 
 # import cv2
 import numpy as np 
-import joblib 
+# import joblib 
 
 model= joblib.load('models.dat')
 st.header("Face MAsk Detection")

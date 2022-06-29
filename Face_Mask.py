@@ -34,3 +34,5 @@ if uploaded_file is not None:
 	else:
 		st.markdown(f'<h1 style="color:white;font-size:24px;">{"No Face Here"}</h1>', unsafe_allow_html=True)
 # 		st.write('No Face Here')
+	age = st.slider('How old are you?', 0, 130, 25)
+	st.write("I'm ", age, 'years old')

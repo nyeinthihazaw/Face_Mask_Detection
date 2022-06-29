@@ -6,6 +6,8 @@ import streamlit as st
 import cv2
 import numpy as np 
 import joblib 
+import pillow as PIL
+from PIL import Image
 
 model= joblib.load('models.dat')
 st.header("Face Mask Detection")

@@ -3,4 +3,4 @@ streamlit
 numpy 
 opencv-python
 joblib
-sklearn
+scikit-learn

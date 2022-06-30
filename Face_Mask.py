@@ -9,8 +9,8 @@ model= joblib.load('models.dat')
 st.header("Face Mask Detection")
 st.write("Choose any image :")
 uploaded_file = st.file_uploader("Choose an image...")
-# min = st.slider('Minimun Intensity for Canny Edge', 0, 255, 50)
-# max = st.slider('Maximun Intensity for Canny Edge', 0, 255, 50)
+min = st.slider('Minimun Intensity for Canny Edge', 0, 255, 255)
+max = st.slider('Maximun Intensity for Canny Edge', 0, 255, 255)
 # kernel_size = st.selectbox('Kernel size for Gaussian Blur',(3, 5)
 if uploaded_file is not None:
 	

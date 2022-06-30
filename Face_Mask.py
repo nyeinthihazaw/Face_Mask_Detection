@@ -1,5 +1,5 @@
-        "--server.enableWebsocketCompression=false",
-        "--server.enableXsrfProtection=false",
+#         "--server.enableWebsocketCompression=false",
+#         "--server.enableXsrfProtection=false",
 from pyexpat import model
 import streamlit as st 
 import cv2
